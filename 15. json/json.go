@@ -8,12 +8,13 @@ import (
 )
 
 type user struct {
-	Name string `json:"name"`
-	Age  int    `json:"age"`
+	Name           string `json:"name"`
+	Age            int    `json:"age"`
+	IgnoreProperty string `json:"-"`
 }
 
 func main() {
-	u := user{"123", 1}
+	u := user{"123", 1, ""}
 	fmt.Println(u)
 
 	// convert to json
